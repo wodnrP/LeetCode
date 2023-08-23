@@ -6,15 +6,18 @@ class Solution(object):
         del(nums1[m:])
         nums1[0:m] += nums2[0:n]
 
-        for i in range(1, m+n):
-            for j in range(m+n):
-                if nums1[i] < nums1[j]:
-                    nums1[i], nums1[j] = nums1[j], nums1[i]
+        # 1차
+        # for i in range(1, m+n):
+        #     for j in range(m+n):
+        #         if nums1[i] < nums1[j]:
+        #             nums1[i], nums1[j] = nums1[j], nums1[i]
         
-        return nums1
+        # 2차 수정 후
+        nums1.sort()
 
-"""
+
 # 확인
+"""
 nums1=[1,2,3,0,0,0]
 nums2=[2,5,6]
 m=3
