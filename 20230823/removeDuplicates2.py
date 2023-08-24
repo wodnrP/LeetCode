@@ -1,19 +1,42 @@
+# class Solution(object):
+#     def removeDuplicates(self, nums):
+#         k=len(nums)
+#         j=2
+#         for i in range(2, k):
+
+#             if nums[j] == nums[j-1] == nums[j-2]:
+#                 print(j, nums, k)
+#                 del(nums[j-2])
+#                 k=k-1
+#                 j-=1
+#             j+=1
+                
+#         return nums
+
+# 수정 1차
 class Solution(object):
     def removeDuplicates(self, nums):
-        k=len(nums)
         j=2
-        for i in range(2, k):
+        for i in range(2, len(nums)):
+            if nums[i] != nums[j-2]:
+                nums[j] = nums[i]
+                j+=1    
+        return j
 
-            if nums[j] == nums[j-1] == nums[j-2]:
-                print(j, nums, k)
-                del(nums[j-2])
-                k=k-1
-                j-=1
-            j+=1
+# 수정 2차
+# class Solution(object):
+#     def removeDuplicates(self, nums):
+#         j=2
+#         for i in range(2, len(nums)):
+#             if nums[i] == nums[j-2]:
+#                 continue
+#             nums[j] = nums[i]
+#             j+=1
                 
-        return nums
-"""
+#         return nums
+
 #확인
+"""
 nums = [0,0,0,0,0]
 print(Solution().removeDuplicates(nums))
 """
