@@ -27,6 +27,7 @@ class Solution(object):
 
 
 # 확인
-
+"""
 s="A man, a plan, a canal: Panama"
 print(Solution().isPalindrome(s))
+"""
