@@ -52,3 +52,4 @@ nums=[12,28,83,4,25,26,25,2,25,25,25,12]
 # 83 28 26 25 25 25 25 25 12 12 4 2
 target=213
 print(Solution().minSubArrayLen(target, nums))
+
