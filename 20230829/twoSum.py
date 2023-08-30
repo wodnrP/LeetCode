@@ -1,11 +1,22 @@
+# 1차
+# class Solution:
+#     def twoSum(self, nums, target: int):
+#         for i, val in enumerate(nums):
+#                 for j, val2 in enumerate(nums):
+#                     if i == j:
+#                         continue
+#                     if val + val2 == target:
+#                         return [i, j]
+
 class Solution:
-    def twoSum(self, nums, target: int):
+    def twoSum(self, nums, target):
+        nums_dict = {}
         for i, val in enumerate(nums):
-                for j, val2 in enumerate(nums):
-                    if i == j:
-                        continue
-                    if val + val2 == target:
-                        return [i, j]
+            minus = target - val
+            if minus not in nums_dict:
+                nums_dict[val] = i
+            else:
+                return [i, nums_dict[minus]]
             
 # 확인
 """
